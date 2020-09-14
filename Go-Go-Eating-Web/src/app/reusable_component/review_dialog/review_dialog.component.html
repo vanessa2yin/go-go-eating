@@ -1,0 +1,10 @@
+<div style="text-align: center; font-size: 20px; color: #777777;">How do you like the restaurant?</div>
+<div style="margin: auto; width: 180px;">
+    <ngb-rating [(ngModel)]="rating" [(rate)]="rating" [starTemplate]="t" max="5" style="outline: none;" (click)="rate()"></ngb-rating>
+</div>
+
+<ng-template #t let-fill="fill">
+    <span class="star" [class.full]="fill === 100">
+        <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+    </span>
+</ng-template>

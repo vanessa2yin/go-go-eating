@@ -1,0 +1,11 @@
+<mat-toolbar class="nav-bar">
+    <!-- Box containing all the buttons -->
+    <span class="left-box">
+        <!-- <button mat-button [ngClass]="{'middle': true}">Go Eating</button> -->
+        <button mat-button [ngClass]="{'middle': true, 'underline': isMainPage()}" (click)="changeSelectedPage('GoEating')">Go Eating</button>
+        <button mat-button [ngClass]="{'middle': true, 'underline': isExplore()}" (click)="changeSelectedPage('Explore')">Explore</button>
+        <button mat-button [ngClass]="{'middle': true, 'underline': isRestaurants()}" (click)="changeSelectedPage('Restaurants')">Restaurants</button>
+        <button mat-button [ngClass]="{'middle': true, 'underline': isOrganize()}" (click)="changeSelectedPage('Organize')">Organize</button>
+        <button mat-button [ngClass]="{'middle': true, 'underline': isNotification()}" (click)="changeSelectedPage('Notification')">Notification</button>
+    </span>
+</mat-toolbar>

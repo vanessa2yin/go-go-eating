@@ -1,0 +1,12 @@
+<div class="line">
+        <div class="row-top" *ngIf="inviterInfo !== undefined">
+            <div class="left">
+                <mat-icon style="color: white; display: inline-block; vertical-align: top;">mail_outline</mat-icon>
+                {{ inviterInfo['full_name'] }} asked to merge with your group
+            </div>
+            <button mat-button class="button" (click)="accept()">Accept</button>
+            <button mat-button class="button" (click)="decline()">Decline</button>
+        </div>
+        <app-request-info-card [mealRequestId]="mergeInfo['inviting_request_id']"></app-request-info-card>
+        <app-request-info-card [mealRequestId]="mergeInfo['invited_request_id']"></app-request-info-card>
+</div>

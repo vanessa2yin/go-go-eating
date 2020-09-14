@@ -1,0 +1,36 @@
+<div class="whole-container" *ngIf="info !== null">
+    <div class="image-container">
+        <img [src]="info.image_url" class="image">
+    </div>
+    <div class="info-container">
+        <div class="line">
+            <div class="left">
+                <mat-icon class="icon">store_mall_directory</mat-icon>
+                <div class="element">{{ info.restaurant_name }}</div>
+                <div class="element"><mat-icon class="icon">restaurant</mat-icon>{{ info.restaurant_style }}</div>
+            </div>
+            <div class="right">
+                <button mat-button class="button element" (click)="rate()">Rate</button>
+            </div>
+        </div>
+        <div class="line">
+            <div class="left">
+                <mat-icon class="icon">location_on</mat-icon>
+                <div class="element">{{ info.address }}</div>
+                <div style="display: block;">
+                    <ngb-rating [(rate)]="info.avg_rating" [starTemplate]="t" [readonly]="true" max="5" style="outline: none;"></ngb-rating>
+                </div>
+            </div>
+            <div class="right">
+                <button mat-button class="button element" (click)="organize()">Eat Here!</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<ng-template #t let-fill="fill">
+    <span class="star" [class.full]="fill === 100">
+        <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+    </span>
+</ng-template>

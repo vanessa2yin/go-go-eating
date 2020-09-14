@@ -1,0 +1,22 @@
+.search-container {
+    margin: 15% auto auto auto;
+    width: 40%;
+    height: 30%;
+    z-index: 1;
+}
+
+.instruction-container {
+    margin: 10% auto auto auto;
+    width: 60%;
+    height: 30%;
+    z-index: 1;
+    text-align: center;
+}
+
+.instruction {
+    width: 20%;
+    margin-right: 10%;
+    color: white;
+    display: inline-block;
+    vertical-align: top;
+}

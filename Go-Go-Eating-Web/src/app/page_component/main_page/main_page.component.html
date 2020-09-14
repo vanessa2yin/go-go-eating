@@ -1,0 +1,9 @@
+<div>
+    <div class="search-container">
+        <app-search></app-search>
+    </div>
+    <div class="instruction-container">
+        <app-instruction class="instruction" *ngFor="let step of steps" [title]="step.title" [content]="step.content"></app-instruction>
+    </div>
+</div>
+

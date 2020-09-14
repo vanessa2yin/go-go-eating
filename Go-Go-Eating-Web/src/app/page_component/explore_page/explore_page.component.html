@@ -1,0 +1,19 @@
+<cdk-virtual-scroll-viewport class="search-container" itemSize="20" [style.height.px]="resultListHeight" [style.width.px]="containerWidth">
+    <app-request-info-card *cdkVirtualFor="let currId of currRequestIdList;" [mealRequestId]="currId"></app-request-info-card>
+</cdk-virtual-scroll-viewport>
+
+<div class="line" [style.width.px]="containerWidth">
+    <div class="button-container">
+        <button class="button" mat-button *ngIf="pageNumber > 1" (click)="setCurrRequestIdList(pageNumber - 1)">
+                <mat-icon style="font-size: 24px;">navigate_before</mat-icon>
+        </button>
+        <button class="button" mat-button *ngIf="pageNumber === 1" (click)="filter()">
+            <mat-icon style="font-size: 24px;">toc</mat-icon>
+        </button>
+    </div>
+    <div class="button-container" style="margin-left: calc(100% - 140px);">
+        <button class="button" mat-button *ngIf="pageNumber * 20 < mealRequestIdList.length" (click)="setCurrRequestIdList(pageNumber + 1)">
+                <mat-icon style="font-size: 24px;">navigate_next</mat-icon>
+        </button>
+    </div>
+</div>

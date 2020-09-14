@@ -1,0 +1,61 @@
+<div class="line title-container">
+Initiate Your Eating Plan!
+</div>
+<div class="form-container" [style.height.px]="height">
+<!-- Date Picker -->
+<div class="line text-container">
+    <div class="line form-title">Date*</div>
+    <div class="element">
+            <input class="form-control element" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+    </div>
+    <button mat-icon-button (click)="d.toggle()" class="element">
+            <i class="material-icons">calendar_today</i>
+    </button>
+</div>
+<!-- Time Picker -->
+<div class="line text-container">
+    <div class="line form-title">Time*</div>
+    <div class="element">
+        <input type="time" class="form-control" value="13:00" [(ngModel)]="time" mdbInput/>
+    </div>
+</div>
+
+<!-- Capacity -->
+<div class="line text-container">
+        <div class="line form-title">Capacity*</div>
+            <div ngbDropdown class="element">
+                <button class="form-control" ngbDropdownToggle placeholder="Capacity">{{ capacity === undefined ? 'Capacity' : capacity }}</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="menu">
+                    <button ngbDropdownItem *ngFor="let number of range" (click)="setCapacity(number)">{{ number }}</button>
+                </div>
+            </div>
+</div>
+
+<!-- Zip Code -->
+<div class="line text-container">
+<div class="element form-title">Zip Code*</div>
+<div class="element">
+        <input class="form-control" type="text" placeholder="Enter Your Zipcode" [(ngModel)]="zipcode">
+</div>
+</div>
+
+<!-- Address -->
+<div class="line text-container">
+    <div class="element form-title">Address</div>
+    <div class="element">
+            <input class="form-control" type="text" placeholder="Enter Your Address" [(ngModel)]="address">
+    </div>
+</div>
+
+<!-- Preference -->
+<div class="line text-container">
+    <div class="element form-title">Preference</div>
+    <div class="element">
+            <input class="form-control" type="text" placeholder="Enter Your Preference" [(ngModel)]="preference">
+    </div>
+</div>
+
+<div class="line">
+    <button mat-button class="post" (click)="post()">POST</button>
+</div>
+</div>

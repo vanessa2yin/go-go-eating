@@ -1,0 +1,28 @@
+<div class="container" *ngIf="info !== undefined && !dismissed">
+    <div class="line">
+        <mat-icon class="icon element">calendar_today</mat-icon>
+        <div class="element">{{ date }}</div>
+    </div>
+    <div class="line">
+            <mat-icon class="icon element">access_time</mat-icon>
+            <div class="element">{{ time }}</div>
+    </div>
+    <div class="line">
+            <mat-icon class="icon element">group</mat-icon>
+            <div class="element">{{ info.participants.length + '/' + info.capacity }}</div>
+    </div>
+    <div class="line">
+            <mat-icon class="icon element">location_on</mat-icon>
+            <div class="element">{{ info.zipcode }}</div>
+    </div>
+    <div class="line" *ngIf=" info.preference !== undefined">
+            <mat-icon class="icon element">mood</mat-icon>
+            <div class="element">{{ info.preference }}</div>
+    </div>
+    <div class="line">
+            <button class="left-button" mat-button *ngIf="userIsOrganizer" (click)="invite()">Invite</button>
+            <button class="button" mat-button *ngIf="!userIsOrganizer && !userIsParticipant" (click)="joinRequest()">Join</button>
+            <button class="button" mat-button *ngIf="!userIsOrganizer && userIsParticipant" (click)="quitRequest()">Quit</button>
+            <button class="right-button" mat-button *ngIf="userIsOrganizer" (click)="dismiss()">Dismiss</button>
+    </div>
+</div>

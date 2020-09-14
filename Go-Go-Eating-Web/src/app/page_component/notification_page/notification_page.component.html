@@ -1,0 +1,10 @@
+<div class="body">
+    <div class="left">
+        <button mat-button [ngClass]="{'button': true, 'underline': selectedPage === 'invitation'}" (click)="setPage('invitation')">Invite Request</button>
+        <button mat-button [ngClass]="{'button': true, 'underline': selectedPage === 'merge'}" (click)="setPage('merge')">Merge Request</button>
+    </div>
+    <div class="right">
+        <app-invitation-page *ngIf="selectedPage === 'invitation'"></app-invitation-page>
+        <app-merge-page *ngIf="selectedPage === 'merge'"></app-merge-page>
+    </div>
+</div>

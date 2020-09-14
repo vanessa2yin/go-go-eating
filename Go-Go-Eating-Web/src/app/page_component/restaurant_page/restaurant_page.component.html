@@ -1,0 +1,17 @@
+<cdk-virtual-scroll-viewport class="search-container" itemSize="15" [style.height.px]="resultListHeight">
+    <app-restaurant-info-card *cdkVirtualFor="let currId of currentRestaurantIdList" [restaurantId]="currId"></app-restaurant-info-card>
+</cdk-virtual-scroll-viewport>
+
+<div class="line">
+    <div class="button-container">
+        <button class="button" mat-button *ngIf="pageNumber > 1" (click)="setCurrentRestaurantIdList(pageNumber - 1)">
+                <mat-icon style="font-size: 24px;">navigate_before</mat-icon>
+        </button>
+    </div>
+    <div class="button-container" style="margin-left: calc(100% - 140px);">
+        <button class="button" mat-button *ngIf="pageNumber * 15 < restaurantIdList.length" (click)="setCurrentRestaurantIdList(pageNumber + 1)">
+                <mat-icon style="font-size: 24px;">navigate_next</mat-icon>
+        </button>
+    </div>
+    
+</div>

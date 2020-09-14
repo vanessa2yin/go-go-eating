@@ -1,0 +1,49 @@
+.line {
+    width: 100;
+    margin-bottom: 10px;
+}
+
+.title-container {
+    color: white;
+    font-size: 30px;
+    text-align: right;
+}
+
+.text-container {
+    color: white;
+    font-size: 20px;
+    text-align: left;
+}
+
+.form-title {
+    width: 35%;
+}
+
+.form-container {
+    text-align: right;
+    width: 40%;
+    margin-left: 60%;
+    overflow: auto;
+}
+
+.element {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.post {
+    color: white;
+    font-size: 20px;
+    background-color: rgb(212,4,36, 0.7);
+    margin-left: 70%;
+}
+
+.form-answer {
+    color: white;
+}
+
+
+.menu {
+    max-height: 150px;
+    overflow-y: auto;
+}

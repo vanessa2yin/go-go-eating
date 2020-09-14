@@ -1,0 +1,8 @@
+<div class="body">
+    <div class="header">
+        <button mat-button [ngClass]="{'button': true, 'middle': true, 'underline': isLoginPage}" (click)="isLoginPage = !isLoginPage">Login</button>
+        <button mat-button [ngClass]="{'button': true, 'middle': true, 'underline': !isLoginPage}" (click)="isLoginPage = !isLoginPage">Register</button>
+    </div>
+    <dialog-login *ngIf="isLoginPage"></dialog-login>
+    <dialog-register *ngIf="!isLoginPage"></dialog-register>
+</div>

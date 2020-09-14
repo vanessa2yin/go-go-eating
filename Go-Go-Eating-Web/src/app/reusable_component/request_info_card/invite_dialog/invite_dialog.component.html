@@ -1,0 +1,11 @@
+<mat-form-field class="line">
+    <input matInput [(ngModel)]="username">
+    <mat-placeholder style="color: white;">
+        Please input username
+    </mat-placeholder>
+</mat-form-field>
+<button mat-button class="button" (click)="search()">Search!</button>
+<div class="line" *ngIf="result !== undefined" style="margin-top: 5px; padding: 10px; border-radius: 2px;">
+    {{ result['user_name'] }}
+    <button mat-button (click)="invite()" style="margin-left: 210px; border: 1px solid; outline: none;">Invite</button>
+</div>

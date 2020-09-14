@@ -1,0 +1,32 @@
+.search-container {
+    width: 80%;
+    min-width: 220px;
+    overflow: auto;
+    margin: 60px auto auto auto;;
+    display: block;
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
+.line {
+    margin: 5px auto auto auto;
+    height: 60px;
+    width: 100%;
+}
+
+.button-container {
+    display: inline-block;
+    width: 70px;
+}
+
+.button {
+    color: white;
+    border: 1px solid white;;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.setting {
+    background-color: transparent;
+    color: white;
+}

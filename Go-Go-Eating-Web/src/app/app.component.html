@@ -1,0 +1,12 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<Navigation *ngIf="isLoggedIn()"></Navigation>
+<div id="bg">
+    <img src="../assets/vegetable_and_spoon_meitu_1.jpg" class="back" alt="">
+</div>
+<div class="container">
+    <app-main-page *ngIf="isMainPage()"></app-main-page>
+    <app-explore-page *ngIf="isLoggedIn() && isExplore()"></app-explore-page>
+    <app-organize-page *ngIf="isLoggedIn() && isOrganize()"></app-organize-page>
+    <app-restaurant-page *ngIf="isLoggedIn() && isRestaurants()"></app-restaurant-page>
+    <app-notification-page *ngIf="isLoggedIn() && isNotification()"></app-notification-page>
+</div>

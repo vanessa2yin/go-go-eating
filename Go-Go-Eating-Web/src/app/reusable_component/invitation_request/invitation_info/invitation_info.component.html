@@ -1,0 +1,16 @@
+<div class="line">
+    <div class="row-top" *ngIf="hostInfo !== undefined">
+        <div class="left">
+            <mat-icon style="color: white; display: inline-block; vertical-align: top;">mail_outline</mat-icon>
+            {{ hostInfo['full_name'] }} invites you for a meal in a {{ info['preference'] }} restaurant
+        </div>
+        <button mat-button class="button" (click)="accept()">Accept</button>
+    </div>
+    <div class="row-bottom">
+        <div class="left">
+            <mat-icon style="color: white; display: inline-block; vertical-align: top;">access_time</mat-icon>
+            {{ date }} at {{ time }}
+        </div>
+        <button mat-button class="button" (click)="decline()">Decline</button>
+    </div>
+</div>

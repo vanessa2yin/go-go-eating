@@ -1,0 +1,15 @@
+<div class="line">
+    <mat-form-field  class="input">
+        <input matInput class="text-field" autocomplete="new-password" [(ngModel)]="email">
+        <mat-placeholder class="placeholder">Email</mat-placeholder>
+    </mat-form-field>
+</div>
+<div class="line">
+    <mat-form-field  class="input">
+        <input matInput class="text-field" autocomplete="new-password" [(ngModel)]="password">
+        <mat-placeholder class="placeholder">Password</mat-placeholder>
+    </mat-form-field>
+</div>
+<div class="line">
+    <button mat-button class="login" (click)="login()">Login</button>
+</div>

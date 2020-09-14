@@ -1,0 +1,25 @@
+.header {
+    width: 100%;
+    height: 50px;
+}
+
+.body {
+    width: 80%;
+    margin: auto;
+}
+
+.underline {
+    border-bottom: 3px solid white;
+    font-weight: bold;
+}
+
+.button {
+    border-radius: 0px;
+    color: white;
+    font-weight: lighter;
+    display: inline-block;
+}
+
+.content {
+    border: 2px yellow solid;
+}

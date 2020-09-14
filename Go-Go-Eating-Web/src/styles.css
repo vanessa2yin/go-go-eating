@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+.log-class .mat-dialog-container {
+    background-color: rgb(0, 0, 0, 0.6);
+    width: 500px;
+}
+
+.filter-class .mat-dialog-container {
+    background-color: rgb(0, 0, 0, 0.6);
+    width: 400px;
+}
